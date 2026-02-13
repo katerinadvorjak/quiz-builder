@@ -1,0 +1,18 @@
+{
+  "name": "quiz-builder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build && npm --prefix backend run build",
+    "start": "npm --prefix backend run start",
+    "lint": "npm --prefix backend run build && npm --prefix frontend run typecheck",
+    "format": "npx prettier --write \"backend/src/**/*.ts\" \"frontend/src/**/*.{ts,tsx}\" README.md"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3"
+  }
+}
